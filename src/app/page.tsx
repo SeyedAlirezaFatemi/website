@@ -85,7 +85,7 @@ const getEducationItems = async () => {
       date: honor.properties.Date.rich_text[0].plain_text,
       gpa: honor.properties.GPA.rich_text[0].plain_text,
       major: honor.properties.Major.rich_text[0].plain_text,
-      minor: honor.properties.Minor.rich_text?.[0]?.plain_text ?? '',
+      minor: honor.properties.Minor.rich_text[0]?.plain_text ?? '',
       description: honor.description,
     })),
     professionalDevelopmentItems.map((profDev) => ({

@@ -24,7 +24,9 @@ export default function Header() {
           <div className="navbar w-full">
             <div
               className="absolute flex-none lg:hidden"
-              onClick={() => setIsChecked(true)}
+              onClick={() => {
+                setIsChecked(true);
+              }}
             >
               <label
                 htmlFor="my-drawer"
@@ -35,7 +37,7 @@ export default function Header() {
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  className="inline-block h-6 w-6 stroke-current"
+                  className="inline-block size-6 stroke-current"
                 >
                   <path
                     strokeLinecap="round"

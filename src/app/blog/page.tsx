@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const getStaticProps = async () => {
-  const blogPosts = (await getBlogPosts()) as BlogPost[];
+  const blogPosts = await getBlogPosts();
   return { blogPosts };
 };
 

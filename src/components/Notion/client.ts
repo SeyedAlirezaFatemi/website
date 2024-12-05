@@ -8,7 +8,6 @@ export const notionClient = new Client({
 const n2m = new NotionToMarkdown({ notionClient });
 
 n2m.setCustomTransformer('video', async (block) => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const { video } = block as any;
   const { type } = video;
   const video_url = video[type].url;

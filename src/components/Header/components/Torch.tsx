@@ -12,7 +12,9 @@ export function Torch() {
       className="-mt-10 cursor-pointer"
       src={theme == 'dark' ? onImage : offImage}
       placeholder="blur"
-      onClick={() => setTheme(theme == 'light' ? 'dark' : 'light')}
+      onClick={() => {
+        setTheme(theme == 'light' ? 'dark' : 'light');
+      }}
       alt="logo"
       width="80"
       height="140"
