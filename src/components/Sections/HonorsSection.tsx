@@ -24,12 +24,11 @@ export default function HonorsSection({ honors }: { honors: Honor[] }) {
       {honors.map((honor) => (
         <div key={honor.id} className="py-4 first:pt-0 last:pb-0">
           <HonorIcon />
-          <ReactMarkdown
-            rehypePlugins={[rehypeRaw, rehypeExternalLinks]}
-            className="prose max-w-none text-justify leading-tight xl:prose-lg 2xl:prose-xl"
-          >
-            {honor.description}
-          </ReactMarkdown>
+          <div className="prose max-w-none text-justify leading-tight xl:prose-lg 2xl:prose-xl">
+            <ReactMarkdown rehypePlugins={[rehypeRaw, rehypeExternalLinks]}>
+              {honor.description}
+            </ReactMarkdown>
+          </div>
           <span className="text-sm text-zinc-500">{`${honor.place} | ${honor.date}`}</span>
         </div>
       ))}

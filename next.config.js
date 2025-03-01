@@ -23,7 +23,6 @@ const sentryBuildOptions = {
   project: 'personal-website',
   widenClientFileUpload: true,
   tunnelRoute: '/monitoring',
-  hideSourceMaps: true,
   disableLogger: true,
 };
 

@@ -83,12 +83,11 @@ const BlogPostPage = async (props: Props) => {
         </div>
         <div className="my-2 h-1 w-full rounded bg-gray-500 opacity-50" />
       </div>
-      <ReactMarkdown
-        rehypePlugins={[rehypeRaw, rehypeExternalLinks]}
-        className="prose max-w-none text-justify leading-tight xl:prose-lg 2xl:prose-xl"
-      >
-        {blogPost.content as string}
-      </ReactMarkdown>
+      <div className="prose max-w-none text-justify leading-tight xl:prose-lg 2xl:prose-xl">
+        <ReactMarkdown rehypePlugins={[rehypeRaw, rehypeExternalLinks]}>
+          {blogPost.content as string}
+        </ReactMarkdown>
+      </div>
       <div>
         <div>
           <h3 className="mb-4 mt-8 text-2xl font-bold">Tags</h3>

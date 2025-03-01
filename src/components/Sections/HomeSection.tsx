@@ -37,7 +37,7 @@ export function HomeSection({
         <SectionHeader className="mb-4 text-center">
           Seyed Alireza Fatemi Jahromi
         </SectionHeader>
-        <div className="flex flex-col flex-wrap items-center justify-center justify-items-center gap-12 lg:flex-row">
+        <div className="flex flex-col flex-wrap place-items-center justify-center gap-12 lg:flex-row">
           <div className="avatar flex-initial">
             <div className="avatar w-48 rounded-full">
               <Image
@@ -141,12 +141,13 @@ export function HomeSection({
               <input type="checkbox" />
               <div className="collapse-title">Course Highlights</div>
               <div className="collapse-content">
-                <ReactMarkdown
-                  rehypePlugins={[rehypeRaw, rehypeExternalLinks]}
-                  className="prose max-w-none pt-1 text-justify leading-tight prose-ul:-mt-2"
-                >
-                  {educationItem.description}
-                </ReactMarkdown>
+                <div className="prose max-w-none pt-1 text-justify leading-tight prose-ul:-mt-2">
+                  <ReactMarkdown
+                    rehypePlugins={[rehypeRaw, rehypeExternalLinks]}
+                  >
+                    {educationItem.description}
+                  </ReactMarkdown>
+                </div>
               </div>
             </div>
           </li>
@@ -163,12 +164,11 @@ export function HomeSection({
             <span className="block text-sm text-gray-500">
               {profDevItem.date}
             </span>
-            <ReactMarkdown
-              rehypePlugins={[rehypeRaw, rehypeExternalLinks]}
-              className="prose max-w-none pt-1 text-justify leading-tight prose-ul:-mt-2"
-            >
-              {profDevItem.description}
-            </ReactMarkdown>
+            <div className="prose max-w-none pt-1 text-justify leading-tight prose-ul:-mt-2">
+              <ReactMarkdown rehypePlugins={[rehypeRaw, rehypeExternalLinks]}>
+                {profDevItem.description}
+              </ReactMarkdown>
+            </div>
           </li>
         ))}
       </ul>
